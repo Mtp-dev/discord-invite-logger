@@ -1,75 +1,84 @@
-# Disord Invite Logger Bot - Discord.js v13
-Discord Invite Logger bot est un bot qui vous permet de traquer les invitations. Il vous permettra de savoir par quel membre a été invité l'utilisateur. Il offre une interface exceptionnelle, grâce aux boutons, nouvelles fonctionnalités de Discord.
+# **Discord Invite Logger Bot - Discord.js v13**
 
-## Please, do not forget to star the project !!
-## S'il vous plait, n'oubliez pas d'étoiler le projet !!
+The Discord Invite Logger Bot allows you to track invites on your Discord server. It enables you to see which member invited a user to your server. It provides an exceptional interface using buttons, one of Discord's latest features.
 
-<details>
-<summary>Installation LOCALHOST</summary>
+## ⭐ **Don't forget to star the project!**
 
+---
 
-1.  Installer [Node.js](https://nodejs.org/en/).
-2.  Cliquez sur le fichier __**install.bat**__ qui vous permet d'installer les dépendances.
-3.  Créer une application en se connectant au [Portail Developers](https://discordapp.com/developers/applications/) sur le site de Discord puis activez l'options bot via l'onglet **Bot** et récupérez le token.
-4.  En bas de la page de l'onglet **Bot**, activez le __**SERVER MEMBERS INTENT**__
-    ![Server Members Instent](https://i.imgur.com/ywbvEv0.png)
-5. Invitez votre bot via le lien d'invitation via l'onglet **OAuth2**.
-6.  Ouvrir le fichier __**config.json**__ et y entrer les informations demandées.
-7.  Dans le fichier __**.env**__, entrez votre token.
-8. Enfin, pour lancer le bot, double-cliquez sur le fichier __**start.bat**__
-9. Si vous avez des questions ou un problème, ouvrez un commentaire dans l'onglet GitHub **[Issues](https://github.com/azynux/discord-invite-logger/issues)** ou **[rejoignez le serveur discord](https://discord.gg/QTswMhEeFd)**.
-10. Voici les variables possible dans la configuration des message du __**config.json**__ :
-```
-{user} : Mention du membre
-{userName} : Nom d'utilisateur du membre
-{userTag} : Tag du membre
-{createdAt} : La date de création du compte du membre
-{createdTimestamp} : Le temps écoulé depuis la création du compte du membre
-{inviteCode} : Le code de l'invitation qui lui a permis de rejoindre le serveur
-{memberCount} : Le nombre de membre dans le serveur (ne compte pas les bots)
-{inviter} : Mention du membre qui a invité
-{inviterName} : Nom d'utilisateur du membre qui a invité
-{inviterTag} : Tag du membre qui a invité
-{inviteCount} : Nombre d'invitation du membre qui a invité
-```
-
-</details>
+## **Installation (LOCALHOST)**
 
 <details>
-<summary>Installation HEBERGEUR (Pterodactyl)</summary>
+<summary>Steps to Install Locally</summary>
 
-1.  Créer une application en se connectant au [Portail Developers](https://discordapp.com/developers/applications/) sur le site de Discord puis activez l'options bot via l'onglet **Bot** et récupérez le token.
-2.  En bas de la page de l'onglet **Bot**, activez le __**SERVER MEMBERS INTENT**__
-    ![Server Members Instent](https://i.imgur.com/ywbvEv0.png)
-3.  Invitez votre bot via le lien d'invitation via l'onglet **OAuth2**.
-4. Copiez/collez les fichiers/dossiers dans l'onglet __**File Manager**__.
-5. Ouvrir le fichier __**config.json**__ et entrez les informations demandées.
-6. Dans le fichier __**.env**__, entrez votre token.
-7. Dans l'onglet __**Startup**__, paramétrez le champs `BOT JS FILE` et mettez `src/index.js`
-8. Allez dans l'onglet `Console` et lancez le bot.
-9. Si vous avez des questions ou un problème, ouvrez un commentaire dans l'onglet GitHub **[Issues](https://github.com/azynux/discord-invite-logger/issues)** ou **[rejoignez le serveur discord](https://discord.gg/QTswMhEeFd)**.
-10. Voici les variables possible dans la configuration des message du
-__**config.json**__ :
-```
-{user} : Mention du membre
-{userName} : Nom d'utilisateur du membre
-{userTag} : Tag du membre
-{createdAt} : La date de création du compte du membre
-{createdTimestamp} : Le temps écoulé depuis la création du compte du membre
-{inviteCode} : Le code de l'invitation qui lui a permis de rejoindre le serveur
-{memberCount} : Le nombre de membre dans le serveur (ne compte pas les bots)
-{inviter} : Mention du membre qui a invité
-{inviterName} : Nom d'utilisateur du membre qui a invité
-{inviterTag} : Tag du membre qui a invité
-{inviteCount} : Nombre d'invitation du membre qui a invité
-```
-
+1. Install [Node.js](https://nodejs.org/en/).
+2. Run the file **`install.bat`** to install the required dependencies.
+3. Create a new application on the [Discord Developer Portal](https://discordapp.com/developers/applications/), enable the bot option in the **Bot** tab, and copy the bot token.
+4. At the bottom of the **Bot** tab, enable the **SERVER MEMBERS INTENT** option.
+   ![Server Members Intent](https://i.imgur.com/ywbvEv0.png)
+5. Use the **OAuth2** tab to generate an invitation link for your bot.
+6. Open the **`config.json`** file and fill in the required information.
+7. Enter your bot token in the **`.env`** file.
+8. Start the bot by double-clicking the **`start.bat`** file.
+9. If you have any questions or issues, open an issue on GitHub under **[Issues](https://github.com/azynux/discord-invite-logger/issues)** or **[join the Discord server](https://discord.gg/QTswMhEeFd)**.
+10. Below are placeholders you can use in the message configuration of the **`config.json`** file:
+   ```
+   {user} : Mention the new member
+   {userName} : Username of the new member
+   {userTag} : Tag of the new member
+   {createdAt} : Account creation date of the new member
+   {createdTimestamp} : Time since the account was created
+   {inviteCode} : Code of the invitation used to join
+   {memberCount} : Member count (excluding bots)
+   {inviter} : Mention the inviter
+   {inviterName} : Username of the inviter
+   {inviterTag} : Tag of the inviter
+   {inviteCount} : Number of invites by the inviter
+   ```
 </details>
 
-# Voir aussi
+---
+
+## **Installation (Hosting with Pterodactyl)**
+
+<details>
+<summary>Steps to Install with Pterodactyl</summary>
+
+1. Create a new application on the [Discord Developer Portal](https://discordapp.com/developers/applications/), enable the bot option in the **Bot** tab, and copy the bot token.
+2. At the bottom of the **Bot** tab, enable the **SERVER MEMBERS INTENT** option.
+   ![Server Members Intent](https://i.imgur.com/ywbvEv0.png)
+3. Use the **OAuth2** tab to generate an invitation link for your bot.
+4. Upload all files and folders to the **File Manager** tab in your Pterodactyl panel.
+5. Open the **`config.json`** file and fill in the required information.
+6. Enter your bot token in the **`.env`** file.
+7. In the **Startup** tab, set the `BOT JS FILE` field to `src/index.js`.
+8. Go to the **Console** tab and start the bot.
+9. If you have any questions or issues, open an issue on GitHub under **[Issues](https://github.com/azynux/discord-invite-logger/issues)** or **[join the Discord server](https://discord.gg/QTswMhEeFd)**.
+10. Below are placeholders you can use in the message configuration of the **`config.json`** file:
+   ```
+   {user} : Mention the new member
+   {userName} : Username of the new member
+   {userTag} : Tag of the new member
+   {createdAt} : Account creation date of the new member
+   {createdTimestamp} : Time since the account was created
+   {inviteCode} : Code of the invitation used to join
+   {memberCount} : Member count (excluding bots)
+   {inviter} : Mention the inviter
+   {inviterName} : Username of the inviter
+   {inviterTag} : Tag of the inviter
+   {inviteCount} : Number of invites by the inviter
+   ```
+</details>
+
+---
+
+## **See Also**
 - [Discord Suggestions Manager Bot](https://github.com/azynux/discord-suggestions-bot)
 
-### Plus de fonctionnalités à venir... Tenez vous informé !
+---
 
-__**REJOIGNEZ MOI SUR DISCORD ([Cliquez ici](https://discord.gg/QTswMhEeFd)) :**__
-[![lunarbyte-studio](https://cms-assets.tutsplus.com/cdn-cgi/image/width=850/uploads/users/1631/posts/34139/image/Twitch%20Panel%20Maker%20for%20a%20Simple%20Chat%20Button%20copy.jpg)](https://discord.gg/QTswMhEeFd)
+### **More features coming soon... Stay tuned!**
+
+__**Join Me on Discord ([Click Here](https://discord.gg/QTswMhEeFd)):**__
+
+[![Discord Link](https://cms-assets.tutsplus.com/cdn-cgi/image/width=850/uploads/users/1631/posts/34139/image/Twitch%20Panel%20Maker%20for%20a%20Simple%20Chat%20Button%20copy.jpg)](https://discord.gg/QTswMhEeFd)
